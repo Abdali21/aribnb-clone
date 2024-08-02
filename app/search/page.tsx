@@ -5,7 +5,8 @@ import { SearchResultData } from '../types/app';
 import { getSearchResult } from '../utils/api';
 import { format } from 'date-fns';
 import ListingCard from '../components/listingCard/ListingCard';
-import Map from '../components/Map/Map';
+import Map from '../components/map/Map';
+
 
 
 type SearchParams = {
