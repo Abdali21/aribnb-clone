@@ -34,15 +34,15 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
         <SearchIcon className='hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2' />
       </div>
       {input && (
-        <div className=' absolute  top-[100%] left-[50%] flex flex-col col-span-3 mx-auto translate-x-[-50%] '>
+        <div className=' absolute top-[100%]  left-1 right-1 sm:left-[50%] flex flex-col col-span-3 mx-auto sm:translate-x-[-50%] '>
            <DateRangePicker
               ranges={[selectionRange]}
               onChange={handleSelect}
               rangeColors={['#FD5B61']}
               minDate={new Date()}
           />
-            <div className='flex items-center border-b bg-white p-4'>
-                <h2 className='text-2xl flex-grow font-semibold'>
+            <div className='flex items-center border-b bg-white px-4  sm:p-4'>
+                <h2 className='text-lg md:text-2xl flex-grow font-semibold'>
                    Number of Guests
                 </h2>
                 <UsersIcon className='h-5' />
@@ -57,7 +57,7 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
              <div className='flex items-center bg-white p-5'>
                 <button
                  type='button'
-                 className='flex-grow text-gray-500'
+                 className='flex-grow text-gray-500 bg-gray-200 rounded-lg shadow-sm p-2 hover:bg-gray-300 transition-colors duration-300'
                  onClick={() => setInput('')}
                  >
                    Cancel
@@ -67,7 +67,7 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
                   pathname: '/search',
                   search:`?location=${input}&startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}&numOfGuests=${numOfGuests}`}}
                   onClick={() => setInput('')}
-                  className='flex-grow text-red-400'
+                  className='flex-grow text-white bg-red-400 rounded-lg shadow-sm p-2 text-center hover:bg-red-500 transition-colors mx-1 duration-300'
                 >
                     Search
                 </Link>

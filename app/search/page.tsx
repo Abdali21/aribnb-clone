@@ -8,7 +8,6 @@ import ListingCard from '../components/listingCard/ListingCard';
 import Map from '../components/map/Map';
 
 
-
 type SearchParams = {
   location: string;
   startDate: string;
